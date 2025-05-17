@@ -1,0 +1,20 @@
+[project]
+name = "llm-siri"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "loguru>=0.7.3",
+    "mlx>=0.25.2",
+    "mlx-lm>=0.24.1",
+    "ray[serve]>=2.46.0",
+]
+
+[[tool.uv.index]]
+url = "http://pypi.tuna.tsinghua.edu.cn/simple"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.10",
+]

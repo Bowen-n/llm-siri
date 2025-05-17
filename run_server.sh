@@ -1,0 +1,1 @@
+serve run llm_siri.script.run_server:llm_service_app
