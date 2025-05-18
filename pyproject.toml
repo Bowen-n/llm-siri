@@ -3,13 +3,24 @@ name = "llm-siri"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
+authors = [
+    { name = "bowen-n", email = "bolun.wu@outlook.com" }
+]
 requires-python = ">=3.12"
 dependencies = [
+    "fire>=0.7.0",
     "loguru>=0.7.3",
     "mlx>=0.25.2",
     "mlx-lm>=0.24.1",
     "ray[serve]>=2.46.0",
 ]
+
+[project.scripts]
+llm-server = "llm_siri.cli.run_server:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [[tool.uv.index]]
 url = "http://pypi.tuna.tsinghua.edu.cn/simple"

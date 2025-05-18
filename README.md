@@ -9,7 +9,8 @@ Managed by uv.
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv python install 3.12
 uv venv --python 3.12
-uv sync --all-groups
+uv sync
+uv pip install -e .
 ```
 
 ### Start LLM Server
@@ -22,7 +23,7 @@ git clone https://www.modelscope.cn/lmstudio-community/Qwen3-30B-A3B-MLX-4bit.gi
 
 ```bash
 # run server
-./script/run_server.sh /path/to/model
+llm-server --model-path /path/to/model
 ```
 
 for testing:

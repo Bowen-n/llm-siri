@@ -1,1 +1,0 @@
-MODEL_PATH=$1 serve run llm_siri.cli.run_server:llm_service_app
