@@ -9,8 +9,10 @@ Managed by uv.
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv python install 3.12
 uv venv --python 3.12
-uv sync
 uv pip install -e .
+
+# for developing
+uv sync --all-groups
 ```
 
 ### Start LLM Server
