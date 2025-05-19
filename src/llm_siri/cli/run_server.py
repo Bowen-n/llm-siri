@@ -27,9 +27,7 @@ def start_ray_server(
     ray.serve.run(
         LLMService.bind(
             model_path=norm_path(model_path),
-            llm_config=LLMConfig(
-                temp=temp, top_p=top_p, top_k=top_k, max_tokens=max_tokens
-            ),
+            llm_config=LLMConfig(temp=temp, top_p=top_p, top_k=top_k, max_tokens=max_tokens),
         ),
         name="llm-siri",
         blocking=True,

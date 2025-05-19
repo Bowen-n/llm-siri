@@ -24,8 +24,7 @@ class LLMService:
             temp=llm_config.temp,
             top_p=llm_config.top_p,
             top_k=llm_config.top_k,
-            xtc_special_tokens=self.tokenizer.encode("\n")
-            + list(self.tokenizer.eos_token_ids),
+            xtc_special_tokens=self.tokenizer.encode("\n") + list(self.tokenizer.eos_token_ids),
         )
 
     def generate(self, messages: list[Message], think=False) -> ChatMessage:
